@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Week 2</title>
+</head>
+<body>
+    <div id="main">
+        <!-- heading  -->
+
+        <h1>
+            Text <span class="arrow"><img width="80" height="80" src="https://img.icons8.com/laces/64/FFFFFF/arrow.png" alt="arrow"/></span> Emoji
+        </h1>
+
+        <!-- encrypt decrypt button  -->
+        <div id="enc-dec-btn">
+            <h3 id="enc-btn">Encrypt Text<span><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/expeditedssl.png" alt="expeditedssl"/></span> </h3>
+            <h3 id="dec-btn">Decrypt Text<span><img width="50" height="50" src="https://img.icons8.com/external-ios-line-2px-amoghdesign/30/FFFFFF/external-access-multimedia-line-30px-ios-line-2px-amoghdesign.png" alt="external-access-multimedia-line-30px-ios-line-2px-amoghdesign"/></span></h3>            
+        </div>
+
+        <!-- input forms for Encryption  -->
+        <div id="encryption">
+            <h5>Type a message</h5>
+            <textarea placeholder="Type Your Message" name="" id="txtmsg" cols="20" rows="8"></textarea>
+            <button class="encrypt-btn">
+                <span><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/expeditedssl.png" alt="expeditedssl"/></span> <b>Encrypt it ! </b>
+            </button>
+            <div class="encresult"></div>
+        </div>
+        <!-- input forms for decryption  -->
+        <div id="decryption">
+            <h5>Paste Emoji </h5>
+            <textarea placeholder="Type Your Message" name="" id="decmsg" cols="20" rows="8"></textarea>
+            <button class="decrypt-btn"><span><img width="50" height="50" src="https://img.icons8.com/external-ios-line-2px-amoghdesign/30/FFFFFF/external-access-multimedia-line-30px-ios-line-2px-amoghdesign.png" alt="external-access-multimedia-line-30px-ios-line-2px-amoghdesign"/></span><b>Decrypt !!! </b></button>
+            <div class="decresult"></div>
+        </div>
+        
+
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
