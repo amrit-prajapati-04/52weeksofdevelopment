@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>week 3</title>
+</head>
+<body>
+    
+    <!-- <div id="time"></div> -->
+    <div id="main">
+        <div id="navbar">
+            <div class="navitems" id="time"></div>
+            <div class="navitems"><strong><a href="https://pin.it/2dwIARA" target="_blank"> Inspired By</a> </strong></div>
+            <div class="navitems"><strong><a href="https://www.linkedin.com/in/amrit-prajapati-75a975211/" target="_blank"> Contact </a> </strong></div>
+            <div class="navitems themeswitcher">
+                <img src="https://img.icons8.com/ios-glyphs/60/bright-moon--v1.png" alt="" id
+                ="switch">
+                <h4>Dark Mode</h4>
+            </div>
+
+        </div>
+        <div id="content">
+            <div id="dateandday">
+                <div id="day"></div>
+                <div id="date"></div>
+            
+            </div>
+            <div id="maincontent">
+                <div class="tasks">
+                <input type="text" name="" id="inputArea" placeholder="Tasks to do">
+                <button id="add"> + </button>    
+            </div>
+            <div id="enteredtask"></div>
+        </div>
+    </div>
+</body>
+<script>
+days = ["Sunday", "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" , "Saturday"]
+Months = ["Jan" , "Feb" , "Mar" ,"Apr" ,"May" , "Jun" , "Jul"  ,"Aug" , "Sep" , "Oct" , "Nov" , "Dec"]
+let date = new Date()
+document.getElementById("day").innerHTML = `<b>${days[date.getDay()]} </b>`
+document.getElementById("date").innerHTML = `<b>${Months[date.getMonth()]} ${date.getDate()} ,${date.getFullYear()} </b>`
+setInterval(()=> {
+    date = new Date()
+    let sec = date.getSeconds()
+    if (sec < 10){
+        sec = `0${sec}`
+    }
+    let min = date.getMinutes()
+    if (min < 10){
+        min = `0${min}`
+    }
+    let hrs = date.getHours()
+    if (hrs < 10){
+        hrs = `0${hrs}`
+    }
+    document.getElementById("time").innerHTML = `<b>${hrs} : ${min} : ${sec}</b>`
+} , 1000);
+
+
+</script>
+<script src="./script.js"></script>
+</html>
